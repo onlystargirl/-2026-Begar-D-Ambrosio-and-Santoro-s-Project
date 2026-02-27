@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Codice - Henry Creel's House with Arduino</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="navbar">
+<div class="logo">Henry Creel's House with Arduino</div>
+<nav class="nav-links">
+<a href="index.html">Home</a>
+<a href="progetto.html">Progetto</a>
+<a href="codice.html">Codice</a>
+<a href="media.html">Media</a>
+</nav>
+</header>
+
+<section class="hero">
+<h1>Struttura del Codice</h1>
+<p>Codice in C implementato all'interno dell'Arduino per la gestione dell'accensione e spegnimento dei led.</p>
+</section>
+
+<section class="section">
+  <h2>CODICE ARDUINO</h2>
+  <div class="code-box">
+    <pre>
+const int lblue = 8;
+const int lrr = 9;
+const int lbianco = 7;
+const int lross = 10;
+
+void setup() {
+  pinMode(lblue, OUTPUT);
+  pinMode(lrr, OUTPUT);
+  pinMode(lbianco, OUTPUT);
+  pinMode(lross, OUTPUT);
+}
+
+void loop() {
+
+  digitalWrite(lrr, HIGH);
+  digitalWrite(lross, HIGH);
+
+  digitalWrite(lblue, LOW);
+  digitalWrite(lbianco, LOW);
+
+  delay(2000);
+
+  digitalWrite(lrr, LOW);
+  digitalWrite(lross, LOW);
+  digitalWrite(lblue, LOW);
+  digitalWrite(lbianco, LOW);
+
+  delay(1500);
+
+  digitalWrite(lblue, HIGH);
+  digitalWrite(lbianco, HIGH);
+
+  delay(2000);
+
+  digitalWrite(lblue, LOW);
+  digitalWrite(lbianco, LOW);
+
+  delay(1500);
+}
+    </pre>
+  </div>
+</section>
+
+<footer>
+<p>© 2026 – Begar, D'Ambrosio and Santoro's Project</p>
+</footer>
+
+</body>
+</html>
